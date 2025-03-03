@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void search(int *arr,int size){
+    int value,i,flag=0;
+    scanf("%d",&value);
+    for(i=0;i<size;i++){
+        if(arr[i]==value){
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+        printf("Found");
+    else
+        printf("Not Found");
+}
+int main() {
+    int size,i;
+        scanf("%d",&size);
+    int arr[size];
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+    search(arr,size);
+     
+    return 0;
+}
