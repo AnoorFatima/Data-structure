@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node{
+    int data;
+    struct Node *next;
+}Node;
+Node* head=NULL;
+void insertNodeInBeg(int ele){
+    Node* newNode=(Node*)malloc(sizeof(Node));
+    newNode->data=ele;
+    newNode->next=NULL;
+    newNode->next=head;
+        head=newNode;
+    printf("Node Inserted.\n");
+}
+void display(){
+    if(head==NULL)
+        printf("List is Empty.\n");
+    else{
+        printf("Elements are: ");
+        Node* temp=head;
+        while(temp!=NULL){
+            printf("%d ",temp->data);
+            temp=temp->next;
+        }
+    }
+}
+int main(){
+    while(1){
+        printf("------ Singly Linked List -------\n");
+        printf("1. Insert node in beginging\n");
+        printf("2.Insert node at end\n");
+        printf("3 .Insert node at any position\n");
+        printf("4. Delete a node from beginging\n");
+        printf("5.Delete a node from end\n");
+        printf("6.Delete a node from any posistion\n");
+        printf("7. Search element in a list\n");
+        printf("8. Sort element\n");
+        printf("9.Display list\n");
+        printf("10. Exit list\n");
+        int choice,value;
+        printf ("Enter choice: ");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+            printf("Enter value: ");
+            scanf("%d",&value);
+            insertNodeInBeg(value);
+            break;
+            case 2:
+            break;
+            case 3:
+            break;
+            case 4:
+            break;
+            case 5:
+            break;
+            case 6:
+            break;
+            case 7:
+            break;
+            case 8:
+            break;
+            case 9:
+            display();
+            break; 
+        }
+        printf("\n");
+    }
+    return 0;
+}
