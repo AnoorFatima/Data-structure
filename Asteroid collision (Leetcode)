@@ -1,0 +1,28 @@
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* asteroidCollision(int* asteroids, int asteroidsSize, int* returnSize) {
+    int* arr= (int*)malloc(asteroidsSize*sizeof(int));
+    int top=-1;
+    for(int i=0;i<asteroidsSize;i++){
+        int flag=0;
+        while(top>=0  && arr[top]>0 && asteroids[i]<0){
+            if(arr[top]==-asteroids[i]){
+                top--;
+                flag=1;
+                break;
+            }
+            else if(arr[top]>-asteroids[i]){
+                flag=1;
+                break;
+            }
+            else {
+                top--;
+            }
+        }
+        if(flag==0)
+        arr[++top]=asteroids[i];
+    }
+    *returnSize=top+1; 
+    return arr;
+}
