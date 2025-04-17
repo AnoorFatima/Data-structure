@@ -170,7 +170,7 @@ void display(){
 int main(){
    system("cls");
     while(1){
-       printf("---- Singly Linked List ----\n");     
+       printf("---- Doubly Linked List ----\n");     
         printf("1. Insert Node In Beginning\n");
         printf("2.Insert Node At End\n");
         printf("3.Insert Node At Any Position \n");
