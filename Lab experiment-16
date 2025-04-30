@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct TreeNode{
+    struct TreeNode*left;
+    int data;
+    struct TreeNode* right;
+};
+struct TreeNode* createNode(int value){
+    struct TreeNode* node=(struct TreeNode)malloc(sizeof(struct TreeNode));
+    node->data=value;
+    node->left=node->right=NULL;
+    return node;
+}
+void insert(int value){
+
+}
+void preorder(struct TreeNode* root){
+    if(root!=NULL){
+        printf("%d ",root->data);
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+void inorder(struct TreeNode* root){
+    if(root!=NULL){
+        preorder(root->left);
+        printf("%d ",root->data);
+        preorder(root->right);
+    }
+}
+void postorder(struct TreeNode* root){
+
+}
+void levelorder(struct TreeNode* root){
+    
+}
+void search(int root,int value){
+    
+}
+void delete(int root){
+    
+}
+int main(){
+    int choice,value;
+    struct TreeNode* root=NULL;
+    while(1){
+        printf("1. Insert\n");
+        printf("2. Pre-order\n");
+        printf("3. In order\n");
+        printf("4. Post order\n");
+        printf("5. Level order\n");
+        printf("6. Search\n");
+        printf("7. Delete\n");
+        printf("8. Exit\n");
+        printf("Enter choice: \n");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+            break;
+            case 2:
+            break;
+            case 3:
+            break;
+            case 4:
+            break;
+            case 5:
+            break;
+            case 6:
+            break;
+            case 7:
+            break;
+            case 8:
+            break;
+            default:
+            printf("Invalid choice!!!\n");
+        }
+    }
+    return 0;
+}
